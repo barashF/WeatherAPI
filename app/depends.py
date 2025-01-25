@@ -13,7 +13,7 @@ city_service = cities_service.CityService(city_repository)
 user_repository = users_repository.UserRepository()
 user_service = users_service.UserServise(user_repository)
 
-auth_service = auth.AuthService(users_repository)
+auth_service = auth.AuthService(user_repository)
 
 relation_user_city_repository = relation_user_cities_repository.UserCitiesRelationRepository()
 relation_user_city_service = relation_user_cities_service.UserCitiesRelationService(relation_user_city_repository)

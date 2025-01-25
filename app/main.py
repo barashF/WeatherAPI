@@ -14,7 +14,3 @@ app.include_router(users.router)
 async def startup_event():
     await init_session()
     asyncio.create_task(get_forecast_service().update_forecast())
-
-@app.get("/")
-async def read_root():
-    return {"Hello": "World"}

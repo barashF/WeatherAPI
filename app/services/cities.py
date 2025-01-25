@@ -12,7 +12,7 @@ class CityService:
     async def add_city(self, name: str, latitude: float, 
                        longitude: float, forecast: dict, session: Session) -> int:
         result = await self.repository.add_city(name, latitude, longitude, 
-                                                longitude, forecast, session)
+                                                forecast, session)
         return result
     
     async def get_cities(self, session: Session) -> list[City]:
